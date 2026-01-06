@@ -33,7 +33,7 @@ st.markdown("""
     }
     .sub-header {
         font-size: 1.5rem;
-        color: #666;
+        color: #333;
         text-align: center;
         margin-bottom: 2rem;
     }
@@ -58,6 +58,15 @@ st.markdown("""
         border-radius: 10px;
         margin: 5px 0;
         border-left: 5px solid #1f77b4;
+        color: #1a1a1a;
+    }
+    .dimension-score h4 {
+        color: #1a1a1a;
+        margin: 0 0 10px 0;
+    }
+    .dimension-score h2 {
+        color: #1f77b4;
+        margin: 5px 0;
     }
     .vulnerability-item {
         background-color: #fff3cd;
@@ -65,6 +74,18 @@ st.markdown("""
         padding: 15px;
         border-radius: 5px;
         margin: 10px 0;
+        color: #1a1a1a;
+    }
+    .vulnerability-item h4 {
+        color: #1a1a1a;
+        margin: 0;
+    }
+    .vulnerability-item p {
+        color: #333;
+        margin: 10px 0 5px 0;
+    }
+    .vulnerability-item small {
+        color: #555;
     }
     .severity-critical {
         color: #dc3545;
@@ -75,12 +96,19 @@ st.markdown("""
         font-weight: bold;
     }
     .severity-medium {
-        color: #ffc107;
+        color: #856404;
         font-weight: bold;
     }
     .severity-low {
         color: #28a745;
         font-weight: bold;
+    }
+    /* Fix all text to be dark */
+    .stMarkdown, .stText, p, span, div {
+        color: #1a1a1a;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: #1a1a1a;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -639,7 +667,9 @@ def show_about_page():
     **"Joint Evaluation: A Human + LLM + Multi-Agent Collaborative Framework for
     Comprehensive AI Safety Assessment"**
 
-    Anonymous Authors, December 26, 2025
+    **Authors**: Himanshu Joshi (COHUMAIN Labs) and Shivani Shukla (University of San Francisco)
+
+    Published: AAAI 2026
 
     The paper demonstrates very large effect sizes compared to automated baselines
     (Cohen's d > 0.8, p < 0.001) and performance statistically indistinguishable
@@ -656,12 +686,12 @@ def show_about_page():
     ### Citation
 
     ```bibtex
-    @article{joe2025,
+    @inproceedings{joshi2026joe,
       title={Joint Evaluation: A Human + LLM + Multi-Agent Collaborative Framework
              for Comprehensive AI Safety Assessment},
-      author={Anonymous Authors},
-      year={2025},
-      journal={arXiv preprint}
+      author={Joshi, Himanshu and Shukla, Shivani},
+      booktitle={Proceedings of the 40th AAAI Conference on Artificial Intelligence},
+      year={2026}
     }
     ```
     """)
