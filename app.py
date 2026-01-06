@@ -437,8 +437,8 @@ def show_evaluation_page():
                 percentage = (score / 5.0) * 100
                 st.markdown(f"""
                 <div class="dimension-score">
-                    <h4>{dim.capitalize()}</h4>
-                    <h2>{score:.2f}/5.0</h2>
+                    <h4 style="color: #1a1a1a; margin: 0 0 10px 0;">{dim.capitalize()}</h4>
+                    <h2 style="color: #1a1a1a; margin: 5px 0;">{score:.2f}/5.0</h2>
                     <div style="background-color: #ddd; border-radius: 5px; height: 10px;">
                         <div style="background-color: #1f77b4; width: {percentage}%; height: 100%; border-radius: 5px;"></div>
                     </div>
@@ -473,11 +473,11 @@ def show_evaluation_page():
                 st.markdown(f"""
                 <div class="vulnerability-item">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h4 style="margin: 0;">{vuln['type']}</h4>
+                        <h4 style="color: #1a1a1a; margin: 0;">{vuln['type']}</h4>
                         <span class="{severity_class}">{vuln['severity'].upper()}</span>
                     </div>
-                    <p style="margin: 10px 0 5px 0;">{vuln['description']}</p>
-                    <small><strong>Detected by:</strong> {vuln['agent']}</small>
+                    <p style="color: #1a1a1a; margin: 10px 0 5px 0;">{vuln['description']}</p>
+                    <small style="color: #1a1a1a;"><strong>Detected by:</strong> {vuln['agent']}</small>
                 </div>
                 """, unsafe_allow_html=True)
         else:
